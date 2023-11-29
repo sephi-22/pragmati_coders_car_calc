@@ -32,4 +32,4 @@ maintenance_costs = {
     "BMW": 13300
 }
 
-maintenance_costs = {key.lower(): value for key, value in maintenance_costs.items()}
+maintenance_costs = {key.capitalize(): value for key, value in maintenance_costs.items()}

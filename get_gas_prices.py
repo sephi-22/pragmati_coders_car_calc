@@ -11,7 +11,6 @@ def scrape_for_gas_prices(url):
         'DNT': '1',
         'Accept-Language': 'en-GB,en;q=0.5'
     }
-    url = "https://gasprices.aaa.com/state-gas-price-averages/"
     response = requests.get(url,headers=headers)
     if response.status_code == 200:
         # Parse the HTML content of the page
@@ -38,10 +37,10 @@ def scrape_for_gas_prices(url):
 
         # Create a sub-dictionary for the state
             state_prices = {
-                'regular': regular_price,
-                'mid_grade': mid_grade_price,
-                'premium': premium_price,
-                'diesel': diesel_price
+                'Regular': regular_price,
+                'Midgrade': mid_grade_price,
+                'Premium': premium_price,
+                'Diesel': diesel_price
             }
 
         # Store the sub-dictionary in the main dictionary
